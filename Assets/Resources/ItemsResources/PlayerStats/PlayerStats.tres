@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterStatsTemplate" load_steps=2 format=3 uid="uid://ddkcoh6ktc1bx"]
+
+[ext_resource type="Script" uid="uid://tmf8uvpbk3mo" path="res://Assets/Resources/CharacterStatsTemplate/CharacterStatResource.gd" id="1_3llxg"]
+
+[resource]
+script = ExtResource("1_3llxg")
+current_health = 0
+max_health = 0
+damage = 0
+defense = 0
+attack_speed = 0.0
+evasive_chance = 0.0
+metadata/_custom_type_script = "uid://tmf8uvpbk3mo"

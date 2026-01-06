@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmsgkpcxkkt5k"]
+[gd_scene load_steps=4 format=3 uid="uid://dmsgkpcxkkt5k"]
 
 [ext_resource type="Script" uid="uid://c7ci2fd04hgb7" path="res://Assets/Scripts/UI/MainUi.gd" id="1_dbv4i"]
 [ext_resource type="PackedScene" uid="uid://d1m5fd65wcjg7" path="res://Assets/Scenes/UI/PlayerStaff/PlayerStaff.tscn" id="2_lvxy2"]
+[ext_resource type="PackedScene" uid="uid://d4krmj48lf003" path="res://Assets/Scenes/UI/Minimap/DungeonMinimap.tscn" id="3_7c2u1"]
 
 [node name="MainUi" type="Control"]
 layout_mode = 3
@@ -12,5 +13,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dbv4i")
 
+[node name="DungeonMinimap" parent="." instance=ExtResource("3_7c2u1")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_bottom = 0.25
+
 [node name="PlayerStaff" parent="." instance=ExtResource("2_lvxy2")]
 layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.15
+anchor_right = 0.85
+anchor_bottom = 0.85

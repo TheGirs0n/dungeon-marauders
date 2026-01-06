@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0perhjnk3rj5"]
+
+[ext_resource type="Script" uid="uid://b71rj46wjxvv5" path="res://Assets/Scripts/Templates/Factorys/MainFactory.gd" id="1_1yul0"]
+[ext_resource type="Script" uid="uid://cbda20ltlrohi" path="res://Assets/Scripts/Templates/ItemFactory.gd" id="1_07mry"]
+[ext_resource type="Script" uid="uid://fjfkv85n72ux" path="res://Assets/Scripts/Templates/RingFactory.gd" id="2_57iyu"]
+[ext_resource type="Script" uid="uid://bm2uja5l6p3uv" path="res://Assets/Scripts/Templates/ArtifactFactory.gd" id="3_gr2xu"]
+
+[node name="Factorys" type="Node"]
+script = ExtResource("1_1yul0")
+
+[node name="ItemFactory" type="Node" parent="."]
+script = ExtResource("1_07mry")
+
+[node name="RingFactory" type="Node" parent="."]
+script = ExtResource("2_57iyu")
+
+[node name="ArtifactFactory" type="Node" parent="."]
+script = ExtResource("3_gr2xu")

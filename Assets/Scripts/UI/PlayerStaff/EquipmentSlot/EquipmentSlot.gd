@@ -1,9 +1,9 @@
 extends TextureRect
 class_name EquipmentSlot
 
-var item_in_slot : ItemTemplate
+var item_in_slot : ItemTemplateResource
 
-func add_item(new_item : ItemTemplate):
+func add_item(new_item : ItemTemplateResource):
 	texture = new_item.item_template.item_texture
 	item_in_slot = new_item
 	

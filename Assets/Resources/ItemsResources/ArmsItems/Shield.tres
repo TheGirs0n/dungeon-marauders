@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemTemplateResource" load_steps=2 format=3 uid="uid://llqcbqw1isr4"]
+
+[ext_resource type="Script" uid="uid://cyr3moe5pii6p" path="res://Assets/Resources/ItemEquipmentTemplate/ItemEquipmentResource.gd" id="1_jtu5v"]
+
+[resource]
+script = ExtResource("1_jtu5v")
+item_type = 0
+item_name = ""
+item_health_modifier = 0
+item_damage_modifier = 0
+item_evasive_modifier = 0
+item_defense_modifier = 0
+item_attack_speed_modifier = 0
+metadata/_custom_type_script = "uid://cyr3moe5pii6p"

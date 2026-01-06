@@ -1,2 +1,0 @@
-extends ItemTemplate
-class_name ItemRightArm

@@ -1,4 +1,5 @@
 extends Node
+class_name PlayerStateMachine
 
 @export var battle_state : AutobattleState
 @export var exploring_state : PlayerExploringState

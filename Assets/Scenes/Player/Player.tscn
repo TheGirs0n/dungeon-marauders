@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://crcxdxclrkac1"]
+[gd_scene load_steps=8 format=3 uid="uid://crcxdxclrkac1"]
 
 [ext_resource type="PackedScene" uid="uid://252c2y0fxq1j" path="res://Assets/Scenes/Template/AutobattleNode.tscn" id="1_0ljjw"]
-[ext_resource type="Script" uid="uid://t8eyb5x717je" path="res://Assets/Scripts/Player/player.gd" id="1_na1c3"]
+[ext_resource type="Script" uid="uid://t8eyb5x717je" path="res://Assets/Scripts/Player/Player.gd" id="1_na1c3"]
+[ext_resource type="Resource" uid="uid://ddkcoh6ktc1bx" path="res://Assets/Resources/ItemsResources/PlayerStats/PlayerStats.tres" id="2_tlg0o"]
 [ext_resource type="Script" uid="uid://dq5vk1bfk070w" path="res://Assets/Scripts/Player/PlayerEquipment.gd" id="3_wp7c0"]
 [ext_resource type="Script" uid="uid://cgnc2jmuwvx2v" path="res://Assets/Scripts/Player/PlayerStateMachine.gd" id="4_qy8wf"]
 [ext_resource type="Script" uid="uid://b665a1845nfds" path="res://Assets/Scripts/Player/PlayerExploringState.gd" id="5_2xki1"]
@@ -10,6 +11,7 @@
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_na1c3")
+characterStats = ExtResource("2_tlg0o")
 
 [node name="MapSprite" type="Sprite2D" parent="."]
 

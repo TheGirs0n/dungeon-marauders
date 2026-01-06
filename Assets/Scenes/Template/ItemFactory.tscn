@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0perhjnk3rj5"]
-
-[ext_resource type="Script" uid="uid://cbda20ltlrohi" path="res://Assets/Scripts/Templates/ItemFactory.gd" id="1_07mry"]
-
-[node name="ItemFactory" type="Node"]
-script = ExtResource("1_07mry")

@@ -1,4 +1,5 @@
 extends Node2D
+class_name Dungeon
 
 @export_group("Dungeon Parameters")
 @export var dungeon_max_size : Vector2i = Vector2i(16, 16)

@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-ItemFactory="*res://Assets/Scenes/Template/ItemFactory.tscn"
+Factorys="*res://Assets/Scenes/Template/Factorys.tscn"
 
 [file_customization]
 

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RingItemResource" load_steps=2 format=3 uid="uid://btdhpst03wsyv"]
+
+[ext_resource type="Script" uid="uid://dm76opeu7oqnv" path="res://Assets/Resources/RingEquipmentTemplate/RingItemResource.gd" id="1_gnut4"]
+
+[resource]
+script = ExtResource("1_gnut4")
+ring_name = ""
+ring_description = ""
+modifier_value = 0.0
+metadata/_custom_type_script = "uid://dm76opeu7oqnv"

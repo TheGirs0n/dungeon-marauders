@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ArtifactItemResource" load_steps=2 format=3 uid="uid://cu4a157lcvhoy"]
+
+[ext_resource type="Script" uid="uid://2x84veuwj052" path="res://Assets/Resources/ArtifactEquipmentTemplate/ArtifactEquipmentResource.gd" id="1_3l7q7"]
+
+[resource]
+script = ExtResource("1_3l7q7")
+artifact_name = ""
+artifact_description = ""
+metadata/_custom_type_script = "uid://2x84veuwj052"
