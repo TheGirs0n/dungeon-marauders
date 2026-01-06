@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0dfkp04qjbkx"]
+
+[ext_resource type="Script" uid="uid://dqj1uic8vynuu" path="res://Assets/Scripts/Rooms/RoomsFabs/LevelUpRoom.gd" id="1_igrfj"]
+[ext_resource type="Texture2D" uid="uid://g8kraplup6iq" path="res://Assets/Sprites/Rooms/Rooms/LevelUpRoom.png" id="2_5oyl5"]
+[ext_resource type="Texture2D" uid="uid://ccp36kxs1wkvn" path="res://Assets/Sprites/Rooms/AvaibleArrows/ArrowLeft.png" id="2_atyqn"]
+[ext_resource type="Texture2D" uid="uid://frt6doy4ri5u" path="res://Assets/Sprites/Rooms/AvaibleArrows/ArrowUp.png" id="3_5oyl5"]
+[ext_resource type="Texture2D" uid="uid://hxt2v0x8u5ct" path="res://Assets/Sprites/Rooms/AvaibleArrows/ArrowRight.png" id="4_5blev"]
+[ext_resource type="Texture2D" uid="uid://5c8l4enkjr58" path="res://Assets/Sprites/Rooms/AvaibleArrows/ArrowDown.png" id="5_7p2hr"]
+
+[node name="LevelUpRoom" type="Node2D" node_paths=PackedStringArray("arrow_avaible_room_left", "arrow_avaible_room_up", "arrow_avaible_room_right", "arrow_avaible_room_down")]
+script = ExtResource("1_igrfj")
+arrow_avaible_room_left = NodePath("LeftArrow")
+arrow_avaible_room_up = NodePath("UpArrow")
+arrow_avaible_room_right = NodePath("RightArrow")
+arrow_avaible_room_down = NodePath("DownArrow")
+
+[node name="RoomSprite" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_5oyl5")
+
+[node name="LeftArrow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-48, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_atyqn")
+
+[node name="UpArrow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -48)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_5oyl5")
+
+[node name="RightArrow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(48, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_5blev")
+
+[node name="DownArrow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 48)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_7p2hr")

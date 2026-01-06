@@ -1,0 +1,13 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbbapfsmjm7r8"]
+
+[ext_resource type="Script" uid="uid://ct666ywm35h4r" path="res://Assets/Scripts/Dungeon/Dungeon.gd" id="1_24wkg"]
+[ext_resource type="PackedScene" uid="uid://dgpy5n8pn2028" path="res://Assets/Scenes/Rooms/BossRoom.tscn" id="2_5qs3n"]
+[ext_resource type="PackedScene" uid="uid://b0cirguaasy5s" path="res://Assets/Scenes/Rooms/BlankRoom.tscn" id="3_64d8o"]
+[ext_resource type="PackedScene" uid="uid://b55bnyobg3lho" path="res://Assets/Scenes/Rooms/RewardRoom.tscn" id="4_gnm8h"]
+[ext_resource type="PackedScene" uid="uid://b0dfkp04qjbkx" path="res://Assets/Scenes/Rooms/LevelUpRoom.tscn" id="5_03ak3"]
+[ext_resource type="PackedScene" uid="uid://b07br23mr7jdb" path="res://Assets/Scenes/Rooms/MonsterRoom.tscn" id="6_x8jex"]
+[ext_resource type="PackedScene" uid="uid://cug4vwkx12ncj" path="res://Assets/Scenes/Rooms/LevelDownRoom.tscn" id="7_f1s1x"]
+
+[node name="Dungeon" type="Node2D"]
+script = ExtResource("1_24wkg")
+dungeon_rooms = Array[PackedScene]([ExtResource("2_5qs3n"), ExtResource("3_64d8o"), ExtResource("4_gnm8h"), ExtResource("5_03ak3"), ExtResource("6_x8jex"), ExtResource("7_f1s1x")])

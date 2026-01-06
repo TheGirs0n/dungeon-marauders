@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://c505cng5ox0x0"]
+
+[ext_resource type="Script" uid="uid://0a4k0ltaulra" path="res://Assets/Scripts/UI/PlayerStaff/StatSlot/PlayerStatSlot.gd" id="1_kcx58"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kcx58"]
+
+[node name="PlayerStatSlot" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("1_kcx58")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("PlaceholderTexture2D_kcx58")
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+text = "sssss"
+horizontal_alignment = 1
+vertical_alignment = 1

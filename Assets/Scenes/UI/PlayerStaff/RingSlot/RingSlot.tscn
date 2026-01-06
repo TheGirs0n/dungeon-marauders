@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://4y6vqpixckwk"]
+
+[ext_resource type="Script" uid="uid://s3b7u82e6nc3" path="res://Assets/Scripts/UI/PlayerStaff/RingSlot/RingSlot.gd" id="1_uxlry"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_uxlry"]
+
+[node name="RingSlot" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_uxlry")
+stretch_mode = 5
+script = ExtResource("1_uxlry")

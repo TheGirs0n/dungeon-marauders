@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://0kag7dmea1ym"]
+
+[ext_resource type="Script" uid="uid://ffxxipgdajfi" path="res://Assets/Scripts/UI/PlayerStaff/ArtifactSlot/ArtifactSlot.gd" id="1_tcter"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tcter"]
+
+[node name="ArtifactSlot" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("1_tcter")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("PlaceholderTexture2D_tcter")
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.5
+bbcode_enabled = true
+text = "aaaa"
+horizontal_alignment = 1
+vertical_alignment = 1

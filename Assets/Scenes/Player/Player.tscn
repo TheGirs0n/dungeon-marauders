@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://crcxdxclrkac1"]
+
+[ext_resource type="PackedScene" uid="uid://252c2y0fxq1j" path="res://Assets/Scenes/Template/AutobattleNode.tscn" id="1_0ljjw"]
+[ext_resource type="Script" uid="uid://t8eyb5x717je" path="res://Assets/Scripts/Player/player.gd" id="1_na1c3"]
+[ext_resource type="Script" uid="uid://dq5vk1bfk070w" path="res://Assets/Scripts/Player/PlayerEquipment.gd" id="3_wp7c0"]
+[ext_resource type="Script" uid="uid://cgnc2jmuwvx2v" path="res://Assets/Scripts/Player/PlayerStateMachine.gd" id="4_qy8wf"]
+[ext_resource type="Script" uid="uid://b665a1845nfds" path="res://Assets/Scripts/Player/PlayerExploringState.gd" id="5_2xki1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d06bf"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_na1c3")
+
+[node name="MapSprite" type="Sprite2D" parent="."]
+
+[node name="FightSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_d06bf")
+
+[node name="PlayerEquipment" type="Node" parent="."]
+script = ExtResource("3_wp7c0")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("battle_state", "exploring_state")]
+script = ExtResource("4_qy8wf")
+battle_state = NodePath("BattleState")
+exploring_state = NodePath("ExploringState")
+
+[node name="BattleState" parent="StateMachine" instance=ExtResource("1_0ljjw")]
+
+[node name="ExploringState" type="Node" parent="StateMachine"]
+script = ExtResource("5_2xki1")

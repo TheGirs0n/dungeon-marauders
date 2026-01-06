@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmsgkpcxkkt5k"]
+
+[ext_resource type="Script" uid="uid://c7ci2fd04hgb7" path="res://Assets/Scripts/UI/MainUi.gd" id="1_dbv4i"]
+[ext_resource type="PackedScene" uid="uid://d1m5fd65wcjg7" path="res://Assets/Scenes/UI/PlayerStaff/PlayerStaff.tscn" id="2_lvxy2"]
+
+[node name="MainUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dbv4i")
+
+[node name="PlayerStaff" parent="." instance=ExtResource("2_lvxy2")]
+layout_mode = 1

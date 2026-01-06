@@ -1,0 +1,2 @@
+extends RoomTemplate
+class_name BossRoom

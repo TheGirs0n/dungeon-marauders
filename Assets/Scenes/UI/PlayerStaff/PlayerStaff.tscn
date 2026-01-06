@@ -1,0 +1,182 @@
+[gd_scene load_steps=10 format=3 uid="uid://d1m5fd65wcjg7"]
+
+[ext_resource type="Script" uid="uid://cnm6disbk2noa" path="res://Assets/Scripts/UI/PlayerStaff/Panels/PlayerStaff.gd" id="1_ppk1f"]
+[ext_resource type="Script" uid="uid://dotppu4y4xv0t" path="res://Assets/Scripts/UI/PlayerStaff/Panels/EquipPanel.gd" id="2_wtek4"]
+[ext_resource type="Script" uid="uid://ct2baftf0g82y" path="res://Assets/Scripts/UI/PlayerStaff/Panels/StatsPanel.gd" id="3_gacdk"]
+[ext_resource type="Script" uid="uid://d8wrb7mvh4my" path="res://Assets/Scripts/UI/PlayerStaff/Panels/RingPanel.gd" id="4_2jrjv"]
+[ext_resource type="PackedScene" uid="uid://c505cng5ox0x0" path="res://Assets/Scenes/UI/PlayerStaff/StatSlot/PlayerStatSlot.tscn" id="4_wtek4"]
+[ext_resource type="Script" uid="uid://bpne63ecna4ek" path="res://Assets/Scripts/UI/PlayerStaff/Panels/ArtifactsPanel.gd" id="5_2rt40"]
+[ext_resource type="PackedScene" uid="uid://4y6vqpixckwk" path="res://Assets/Scenes/UI/PlayerStaff/RingSlot/RingSlot.tscn" id="6_gacdk"]
+[ext_resource type="PackedScene" uid="uid://0kag7dmea1ym" path="res://Assets/Scenes/UI/PlayerStaff/ArtifactSlot/ArtifactSlot.tscn" id="8_2jrjv"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dwcb2"]
+
+[node name="PlayerStaff" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ppk1f")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_dwcb2")
+
+[node name="EquipPanel" type="Panel" parent="BackgroundImage"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.013
+anchor_right = 0.5
+anchor_bottom = 0.8
+script = ExtResource("2_wtek4")
+
+[node name="StatsPanel" type="Panel" parent="BackgroundImage"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.013
+anchor_top = 0.8
+anchor_right = 0.5
+anchor_bottom = 1.0
+script = ExtResource("3_gacdk")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundImage/StatsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.3
+bbcode_enabled = true
+text = "player stats"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundImage/StatsPanel/RichTextLabel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BackgroundImage/StatsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.3
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="PlayerStatSlot" parent="BackgroundImage/StatsPanel/HBoxContainer" instance=ExtResource("4_wtek4")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerStatSlot2" parent="BackgroundImage/StatsPanel/HBoxContainer" instance=ExtResource("4_wtek4")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerStatSlot3" parent="BackgroundImage/StatsPanel/HBoxContainer" instance=ExtResource("4_wtek4")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerStatSlot4" parent="BackgroundImage/StatsPanel/HBoxContainer" instance=ExtResource("4_wtek4")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RingPanel" type="Panel" parent="BackgroundImage"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.013
+anchor_right = 0.988
+anchor_bottom = 0.2
+script = ExtResource("4_2jrjv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundImage/RingPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.3
+bbcode_enabled = true
+text = "player rings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundImage/RingPanel/RichTextLabel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BackgroundImage/RingPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.3
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="RingSlot" parent="BackgroundImage/RingPanel/HBoxContainer" instance=ExtResource("6_gacdk")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RingSlot2" parent="BackgroundImage/RingPanel/HBoxContainer" instance=ExtResource("6_gacdk")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RingSlot3" parent="BackgroundImage/RingPanel/HBoxContainer" instance=ExtResource("6_gacdk")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ArtifactsPanel" type="VBoxContainer" parent="BackgroundImage"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.225
+anchor_right = 0.988
+anchor_bottom = 0.975
+alignment = 1
+script = ExtResource("5_2rt40")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundImage/ArtifactsPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+bbcode_enabled = true
+text = "player artifacts"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundImage/ArtifactsPanel/RichTextLabel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ArtifactSlot" parent="BackgroundImage/ArtifactsPanel" instance=ExtResource("8_2jrjv")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ArtifactSlot2" parent="BackgroundImage/ArtifactsPanel" instance=ExtResource("8_2jrjv")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ArtifactSlot3" parent="BackgroundImage/ArtifactsPanel" instance=ExtResource("8_2jrjv")]
+layout_mode = 2
+size_flags_vertical = 3
